@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/el-squireo/Documents/CLI/cli.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+stdint.h
+-
+stdbool.h
+-
+cli.h
+/home/el-squireo/Documents/CLI/cli.h
+
+/home/el-squireo/Documents/CLI/cli.h
+

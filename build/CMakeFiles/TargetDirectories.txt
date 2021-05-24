@@ -1,0 +1,3 @@
+/home/el-squireo/Documents/CLI/build/CMakeFiles/rebuild_cache.dir
+/home/el-squireo/Documents/CLI/build/CMakeFiles/edit_cache.dir
+/home/el-squireo/Documents/CLI/build/CMakeFiles/cli.dir
