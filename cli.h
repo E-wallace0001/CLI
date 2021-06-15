@@ -3,6 +3,11 @@
 #define CLI_H
 
 /*
+** function to check whether a command is a function
+*/
+int is_function(char *arg);
+
+/*
 ** struct for holding CLI info
 */
 typedef struct token{

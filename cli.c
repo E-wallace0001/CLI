@@ -15,15 +15,20 @@
 #define copy_buffer(buff_a, buff_b, length) memcpy(buff_a, buff_b, length*sizeof(char)) 
 
 
-//proptype
-int is_function(char *arg);
+
+// prototype function pointer to a function
 int ( *builtin_functions[]) (token);
 
-
-
+/*
+** a list of instrunctions to execute
+*/
 instruct_cap **instruct_list;
 
 int inst_length = 0 ;
+
+/*
+** appends an instrunction to an array to be executed
+*/
 
 int add_instr( token args)
 {
@@ -55,6 +60,10 @@ int add_instr( token args)
     
 }
 
+/* 
+** executes the set of instructions stored in a table
+*/
+
 int run_instr( token args)
 {
     
@@ -70,7 +79,7 @@ int run_instr( token args)
 }
 
 /*
-**  Example commands
+**  Example commands that can be called from the CLI
 */
 
 int assert_clause( token args )
@@ -78,6 +87,10 @@ int assert_clause( token args )
     printf("asserted \n");
     return 0 ;
 }
+
+/*
+**closes the program from in the CLI
+*/
 
 int __exit( token args )
 {
@@ -90,11 +103,18 @@ int new_func( token args )
     return 0;
 }
 
+/*
+** A simple 'about' statement
+*/
 int about( token args )
 {
     printf("CLI is a basic command line interface programmed by Edwin Wallace for the purpose of controlling subsystems using subroutines.\n");
 }
 
+
+/*
+** help function be called from the CLI to give you the avilable commands
+*/
 int help( token args )
 {
     printf("Available commands.\n");
@@ -112,7 +132,7 @@ int help( token args )
 
 /* 
 ** Simple storing and recalling the strings and functions
-** TODO: replace with hash table, and encapsulate into a struct
+** TODO: replace with hash table, and encapsulate into a struct so builint string and functions form single array of structs
 */
 
 /*
